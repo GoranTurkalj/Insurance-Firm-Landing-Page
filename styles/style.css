@@ -24,4 +24,71 @@ h6 {
   background-color: white;
   margin: 0 auto;
 }
+
+header {
+  height: 5rem;
+  padding: 1.25rem 10.5rem;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav #logo {
+  height: 18px;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__list li {
+  margin-left: 1.875rem;
+}
+
+.nav__list li a {
+  text-decoration: none;
+  color: #837d87;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav__list li a:hover, .nav__list li a:focus, .nav__list li a:active {
+  color: #2b272f;
+  cursor: pointer;
+}
+
+.nav__list button {
+  height: 2.5rem;
+  width: 146px;
+  border: 2px solid #2d2640;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2d2640;
+  outline: none;
+}
+
+.nav__list button:hover, .nav__list button:focus, .nav__list button:active {
+  background-color: #2b272f;
+  color: white;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
