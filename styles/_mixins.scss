@@ -1,0 +1,28 @@
+@mixin button($color, $borderColor, $textColorHover, $backgroundColorHover) {
+  height: 2.5rem;
+  width: 146px;
+  border: 2px solid $borderColor;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $color;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $backgroundColorHover;
+    color: $textColorHover;
+
+    cursor: pointer;
+  }
+}
+
+@mixin topLine($borderColor) {
+  width: 152px;
+  height: 1px;
+  border-top: 1px solid $borderColor;
+  margin-bottom: 73px;
+}

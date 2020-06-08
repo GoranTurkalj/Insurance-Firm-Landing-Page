@@ -76,13 +76,13 @@ header {
 .nav__list button {
   height: 2.5rem;
   width: 146px;
-  border: 2px solid #2d2640;
+  border: 2px solid #2b272f;
   background-color: transparent;
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #2d2640;
+  color: #2b272f;
   outline: none;
 }
 
@@ -90,5 +90,112 @@ header {
   background-color: #2b272f;
   color: white;
   cursor: pointer;
+}
+
+.hero-section {
+  height: 37.5rem;
+  padding: 105px 10.5rem;
+  background-color: #2d2640;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-info {
+  height: 370px;
+  width: 570px;
+  padding-right: 30px;
+  color: white;
+}
+
+.hero-info__line {
+  width: 152px;
+  height: 1px;
+  border-top: 1px solid white;
+  margin-bottom: 73px;
+}
+
+.hero-info__title, .features-info__title {
+  font-size: 4.4rem;
+  line-height: 0.9;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.hero-info__desc {
+  margin-bottom: 37px;
+  line-height: 1.5;
+}
+
+.hero-info__btn {
+  height: 2.5rem;
+  width: 146px;
+  border: 2px solid white;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+  outline: none;
+}
+
+.hero-info__btn:hover, .hero-info__btn:focus, .hero-info__btn:active {
+  background-color: white;
+  color: #2d2640;
+  cursor: pointer;
+}
+
+.hero-image {
+  background-color: green;
+  height: 370px;
+  width: 33.75rem;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+.features-section {
+  height: 1400px;
+  padding-top: 306px;
+  padding-left: 10.5rem;
+  padding-right: 10.5rem;
+}
+
+.features-info__line {
+  width: 152px;
+  height: 1px;
+  border-top: 1px solid #95a9c6;
+  margin-bottom: 73px;
+}
+
+.features-info__title {
+  margin-bottom: 6.4rem;
+  color: #2b272f;
+}
+
+.features-info__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features-info__list li:first-of-type {
+  margin-right: 2.5rem;
+}
+
+.feature-item__subtitle {
+  padding-top: 42px;
+  padding-bottom: 27px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2b272f;
+}
+
+.feature-item__desc {
+  color: #837d87;
+  line-height: 1.5;
 }
 /*# sourceMappingURL=style.css.map */
