@@ -141,21 +141,55 @@ header {
 .features-info__list {
   list-style-type: none;
   display: flex;
+  justify-content: space-between;
+  width: auto;
 
   li:first-of-type {
-    margin-right: 2.5rem;
+    width: 32%;
+  }
+
+  li:nth-of-type(2) {
+    padding-left: 1rem;
+    width: 34%;
+  }
+
+  li:last-of-type {
+    padding-left: 0.5rem;
+    width: 32%;
   }
 }
 
 .feature-item__subtitle {
-  padding-top: 42px;
-  padding-bottom: 27px;
+  padding-top: 40px;
+  padding-bottom: 1rem;
   font-size: 1.7rem;
-  font-weight: 700;
+  font-weight: 400;
   color: $VeryDarkViolet;
 }
 
 .feature-item__desc {
   color: $DarkGrayishViolet;
   line-height: 1.5;
+}
+
+.features-info__work {
+  margin-top: 164px;
+  height: 250px;
+  background-color: $DarkViolet;
+  padding: 74px 80px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  button {
+    @include button(white, white, $DarkViolet, white);
+    width: 160px;
+  }
 }
