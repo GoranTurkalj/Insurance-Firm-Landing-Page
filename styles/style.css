@@ -215,9 +215,9 @@ header {
 
 .features-info__work {
   margin-top: 164px;
+  padding: 0 80px;
   height: 250px;
   background-color: #2d2640;
-  padding: 74px 80px;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,6 +253,89 @@ header {
 .features-info__work button:hover, .features-info__work button:focus, .features-info__work button:active {
   background-color: white;
   color: #2d2640;
+  cursor: pointer;
+}
+
+footer {
+  padding: 0 10.5rem;
+  height: 325px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer hr {
+  margin: 34px 0;
+  border-top: 1px solid #837d87;
+  opacity: 35%;
+}
+
+.footer-info__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-info__social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-info__social ul li {
+  margin-left: 1rem;
+}
+
+.footer-info__social ul li i {
+  font-size: 1.5rem;
+  color: #837d87;
+}
+
+.footer-info__social a:hover i,
+.footer-info__social a:focus i,
+.footer-info__social a:active i {
+  color: #2b272f;
+}
+
+.footer-info__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.info-container {
+  width: 25%;
+}
+
+.info-container h4 {
+  font-family: "Karla";
+  margin-bottom: 36px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #837d87;
+  letter-spacing: 1px;
+}
+
+.info-container li {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2d2640;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.info-container li:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
