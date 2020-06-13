@@ -80,6 +80,35 @@ header {
   padding: 105px 10.5rem;
   background-color: $DarkViolet;
   display: flex;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+
+  background-image: url("../images/bg-pattern-intro-left-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 196px;
+  height: 500px;
+  position: absolute;
+  bottom: -55%;
+  left: 0%;
+}
+
+.hero-section::after {
+  content: "";
+  background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*It's worth mentioning that if your background-size is equal to the container size for a given axis, then a percentage position for that axis will have no effect because the "container-image difference" will be zero. You will need to offset using absolute values.*/
+  background-position-x: 100%;
+  background-position-y: -80px;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
 }
 
 .hero-info {
@@ -106,6 +135,8 @@ header {
 }
 .hero-info__btn {
   @include button(white, white, $DarkViolet, white);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-image {
@@ -177,6 +208,10 @@ header {
   padding: 0 80px;
   height: 250px;
   background-color: $DarkViolet;
+  background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -198,14 +233,21 @@ header {
 
 footer {
   padding: 0 10.5rem;
-  height: 325px;
+  padding-top: 60px;
+  position: relative;
+
+  background-image: url("../images/bg-pattern-footer-desktop.svg");
+  background-size: 525px 230px;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
 
   ul {
     list-style-type: none;
   }
 
   hr {
-    margin: 34px 0;
+    margin-top: 34px;
+    margin-bottom: 48px;
     border-top: 1px solid $DarkGrayishViolet;
     opacity: 35%;
   }
@@ -266,5 +308,9 @@ footer {
       text-decoration: underline;
       cursor: pointer;
     }
+  }
+
+  li:last-of-type {
+    margin-bottom: 64px;
   }
 }
