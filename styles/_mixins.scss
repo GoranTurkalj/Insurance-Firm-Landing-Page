@@ -1,4 +1,5 @@
 @mixin button($color, $borderColor, $textColorHover, $backgroundColorHover) {
+  transition: all 200ms;
   height: 2.5rem;
   width: 146px;
   border: 2px solid $borderColor;

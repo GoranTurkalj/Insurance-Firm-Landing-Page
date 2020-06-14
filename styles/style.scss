@@ -1,4 +1,4 @@
-@import "colors";
+@import "variables";
 @import "mixins";
 
 * {
@@ -22,7 +22,7 @@ h6 {
 }
 
 #wrapper {
-  width: 1440px;
+  max-width: 90rem;
   background-color: rgb(255, 255, 255);
   margin: 0 auto;
 }
@@ -40,7 +40,7 @@ header {
   align-items: center;
 
   #logo {
-    height: 18px;
+    height: 1.125rem;
   }
 
   &__list {
@@ -73,11 +73,17 @@ header {
   }
 }
 
+#hamburger-menu {
+  display: none;
+}
+
 // Top Section - Hero Section**************************************************************
+
+//what about main!!!!!!!
 
 .hero-section {
   height: 37.5rem;
-  padding: 105px 10.5rem;
+  padding: $containerPadding;
   background-color: $DarkViolet;
   display: flex;
   position: relative;
@@ -89,11 +95,11 @@ header {
   background-image: url("../images/bg-pattern-intro-left-desktop.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 196px;
-  height: 500px;
+  width: 12.25rem;
+  height: 31.25rem;
   position: absolute;
   bottom: -55%;
-  left: 0%;
+  left: 0;
 }
 
 .hero-section::after {
@@ -103,7 +109,7 @@ header {
   background-repeat: no-repeat;
   /*It's worth mentioning that if your background-size is equal to the container size for a given axis, then a percentage position for that axis will have no effect because the "container-image difference" will be zero. You will need to offset using absolute values.*/
   background-position-x: 100%;
-  background-position-y: -80px;
+  background-position-y: -5rem;
   width: 50%;
   height: 100%;
   position: absolute;
@@ -112,9 +118,9 @@ header {
 }
 
 .hero-info {
-  height: 370px;
-  width: 570px;
-  padding-right: 30px;
+  height: 23.125rem;
+  width: 35.625rem;
+  padding-right: 1.875rem;
   color: white;
 }
 
@@ -130,7 +136,7 @@ header {
 }
 
 .hero-info__desc {
-  margin-bottom: 37px;
+  margin-bottom: 2.3rem;
   line-height: 1.5;
 }
 .hero-info__btn {
@@ -140,9 +146,8 @@ header {
 }
 
 .hero-image {
-  background-color: green;
-  height: 370px;
-  width: 33.75rem; //540px
+  height: 23.125rem;
+  width: 33.75rem;
 
   img {
     width: 100%;
@@ -152,9 +157,9 @@ header {
 // Middle Section - Work section**********************************************************************
 
 .features-section {
-  height: 1400px;
+  height: 87.5rem;
 
-  padding-top: 306px;
+  padding-top: 19.125rem;
   padding-left: 10.5rem;
   padding-right: 10.5rem;
 }
@@ -191,7 +196,7 @@ header {
 }
 
 .feature-item__subtitle {
-  padding-top: 40px;
+  padding-top: 2.5rem;
   padding-bottom: 1rem;
   font-size: 1.7rem;
   font-weight: 400;
@@ -204,9 +209,9 @@ header {
 }
 
 .features-info__work {
-  margin-top: 164px;
-  padding: 0 80px;
-  height: 250px;
+  margin-top: 10.25rem;
+  padding: 0 5rem;
+  height: 15.625rem;
   background-color: $DarkViolet;
   background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
   background-size: contain;
@@ -225,19 +230,20 @@ header {
 
   button {
     @include button(white, white, $DarkViolet, white);
-    width: 160px;
+    width: 10rem;
   }
 }
 
 //Footer****************************************************************************
 
 footer {
+  background-color: $VeryLightGray;
   padding: 0 10.5rem;
-  padding-top: 60px;
+  padding-top: 3.75rem;
   position: relative;
 
   background-image: url("../images/bg-pattern-footer-desktop.svg");
-  background-size: 525px 230px;
+  background-size: 32.8rem 14.375rem;
   background-position: 0% 0%;
   background-repeat: no-repeat;
 
@@ -246,8 +252,8 @@ footer {
   }
 
   hr {
-    margin-top: 34px;
-    margin-bottom: 48px;
+    margin-top: 2.125rem;
+    margin-bottom: 3rem;
     border-top: 1px solid $DarkGrayishViolet;
     opacity: 35%;
   }
@@ -290,7 +296,7 @@ footer {
 
   h4 {
     font-family: "Karla";
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
     font-size: 0.9rem;
     font-weight: 700;
     color: $DarkGrayishViolet;
@@ -302,7 +308,7 @@ footer {
     font-weight: 700;
     color: $DarkViolet;
     letter-spacing: 1px;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 
     &:hover {
       text-decoration: underline;
@@ -311,6 +317,199 @@ footer {
   }
 
   li:last-of-type {
-    margin-bottom: 64px;
+    margin-bottom: 4rem;
   }
+}
+
+//Mobile Version XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+@media screen and (max-width: 375px) {
+  html {
+    width: 100vw;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  #wrapper {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  // Header ******************************************************
+  header {
+    padding: 1.5rem;
+  }
+
+  .nav__list {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  // Main **********************************************************
+
+  //Top Section - Hero Section ****************************************
+  .hero-section {
+    height: fit-content;
+    padding: 0;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .hero-section::before {
+    content: "";
+
+    background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 165px;
+    height: 165px;
+    position: absolute;
+    top: 47.4%;
+  }
+
+  .hero-section::after {
+    content: "";
+    background-image: url("../images/bg-pattern-intro-right-mobile.svg");
+    background-size: 120px 330px;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    top: 78.6%;
+    left: 50%;
+  }
+
+  .hero-info {
+    height: 500px;
+    width: 375px;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-info__line {
+    display: none;
+  }
+
+  .hero-info__title {
+    font-size: 2.9rem;
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    position: relative; // to place it above the svg lines
+  }
+
+  .hero-info__desc {
+    margin-bottom: 2.3rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .hero-info__btn {
+    @include button(white, white, $DarkViolet, white);
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-image {
+    height: 28.125rem;
+    width: 375px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // Work Section ****************************************************************
+
+  .features-section {
+    height: fit-content;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-info__line {
+    // improve this xxxxxxxxxxxxxxxxxxxxxxx
+    @include topLine($GrayishBlue);
+    margin-top: 8.75rem;
+    margin-bottom: 2.9rem;
+  }
+
+  .features-info__title {
+    margin-bottom: 6.4rem;
+  }
+
+  .features-info__list {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+
+    li:first-of-type {
+      width: auto;
+    }
+
+    li:nth-of-type(2) {
+      padding: 0;
+      margin: 4rem 0;
+      width: auto;
+    }
+
+    li:last-of-type {
+      padding: 0;
+      width: auto;
+    }
+  }
+  //general list item
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item__desc {
+    text-align: center;
+  }
+
+  .features-info__work {
+    margin-top: 9rem;
+    padding: 0;
+    height: 21.5rem;
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    background-size: 174px 316px;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 0%;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 400;
+      line-height: 1;
+      margin-top: 1rem;
+      margin-bottom: 3.3rem;
+    }
+
+    button {
+      @include button(white, white, $DarkViolet, white);
+      width: 10rem;
+    }
+  }
+
+  //Footer *********************************************************
 }
