@@ -1,0 +1,137 @@
+footer {
+  background-color: $VeryLightGray;
+  padding: 0 10.5rem;
+  padding-top: 3.75rem;
+  position: relative;
+
+  background-image: url("../images/bg-pattern-footer-desktop.svg");
+  background-size: 32.8rem 14.375rem;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+
+  ul {
+    list-style-type: none;
+  }
+
+  hr {
+    margin-top: 2.125rem;
+    margin-bottom: 3rem;
+    border-top: 1px solid $DarkGrayishViolet;
+    opacity: 35%;
+  }
+}
+
+.footer-info__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+
+    li {
+      margin-left: 1rem;
+
+      i {
+        font-size: 1.5rem;
+        color: $DarkGrayishViolet;
+      }
+    }
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    i {
+      color: $VeryDarkViolet;
+    }
+  }
+}
+
+.footer-info__nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.info-container {
+  width: 25%;
+
+  h4 {
+    font-family: "Karla";
+    margin-bottom: 2.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $DarkGrayishViolet;
+    letter-spacing: 1px;
+  }
+
+  li {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $DarkViolet;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  li:last-of-type {
+    margin-bottom: 4rem;
+  }
+}
+
+//MOBILE FOOTER XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+@media only screen and (max-width: 375px) {
+  footer {
+    margin-top: 8.875rem;
+    padding: 0 1.5rem;
+    padding-top: 5.5rem;
+    position: relative;
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
+    background-size: 100% 10.75rem;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    hr {
+      margin: 2.5rem 0;
+      border-top: 1px solid $DarkGrayishViolet;
+      opacity: 35%;
+    }
+  }
+
+  .footer-info__social {
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      width: 50%;
+      justify-content: space-around;
+      margin-top: 2.5rem;
+
+      li {
+        margin-left: 0;
+
+        i {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .footer-info__nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-container {
+    width: 100%;
+    text-align: center;
+  }
+}

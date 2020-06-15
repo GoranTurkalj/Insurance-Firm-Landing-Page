@@ -23,7 +23,7 @@
 
 @mixin topLine($borderColor) {
   width: 152px;
-  height: 1px;
+  border: none;
   border-top: 1px solid $borderColor;
   margin-bottom: 73px;
 }
