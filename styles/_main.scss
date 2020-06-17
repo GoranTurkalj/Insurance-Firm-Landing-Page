@@ -1,304 +1,147 @@
-// Hero Section**************************************************************
+//INTRO SECTION XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+.intro-section {
+  background-color: blueviolet;
+  width: 100%;
+}
 
-.hero-section {
-  height: 37.5rem;
-  padding: $containerPadding;
+.intro-section__line {
+  display: none;
+}
+
+.intro-section__hero {
+  width: 100%;
+  height: 451px;
+  background-image: url("../images/image-intro-mobile.jpg");
+  background-repeat: no-repeat;
+}
+
+.intro-section__introduction {
   background-color: $DarkViolet;
+  background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+  background-repeat: no-repeat;
+  padding: 0 1.5rem;
+
   display: flex;
-  position: relative;
-}
-
-.hero-section::before {
-  content: "";
-
-  background-image: url("../images/bg-pattern-intro-left-desktop.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 12.25rem;
-  height: 31.25rem;
-  position: absolute;
-  bottom: -55%;
-  left: 0;
-}
-
-.hero-section::after {
-  content: "";
-  background-image: url("../images/bg-pattern-intro-right-desktop.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: -5rem;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-}
-
-.hero-info {
-  height: 23.125rem;
-  width: 35.625rem;
-  padding-right: 1.875rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
   color: white;
 }
 
-.hero-info__line {
-  @include topLine(white);
-}
-
-.hero-info__title {
-  font-size: 4.4rem;
-  line-height: 0.9;
+.intro-section__title {
+  font-size: 2.9rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  margin-top: 6.25rem;
+  transform: scale(1.02);
 }
 
-.hero-info__desc {
-  margin-bottom: 2.3rem;
+.intro-section__info {
   line-height: 1.5;
+  margin: 3rem 0;
 }
-.hero-info__btn {
+.intro-section__cta {
   @include button(white, white, $DarkViolet, white);
-  position: relative;
+  margin-bottom: 6.25rem;
+  position: relative; // because of the pseudo element from below, covering a portion of the button
   z-index: 1;
 }
 
-.hero-image {
-  width: 33.75rem;
-  height: 40.625rem;
-  background-image: url("../images/image-intro-desktop.jpg");
-}
-
-// Work section**********************************************************************
-
+//FEATURES SECTION XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 .features-section {
-  height: 87.5rem;
-
-  padding-top: 19.125rem;
-  padding-left: 10.5rem;
-  padding-right: 10.5rem;
-}
-
-.features-info__line {
-  @include topLine($DarkGrayishViolet);
-  opacity: 80%;
-}
-
-.features-info__title {
-  @extend .hero-info__title;
-  margin-bottom: 6.4rem;
+  background-color: white;
   color: $VeryDarkViolet;
-}
-
-.features-info__list {
-  list-style-type: none;
+  width: 100%;
+  padding: 8.75rem 1.5rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: auto;
-  //flex-basis: fit-content; // EXPERIMENT
-
-  li:first-of-type {
-    width: 32%;
-  }
-
-  li:nth-of-type(2) {
-    padding-left: 1rem;
-    width: 34%;
-  }
-
-  li:last-of-type {
-    padding-left: 0.5rem;
-    width: 32%;
-  }
-}
-
-.feature-item__subtitle {
-  padding-top: 2.5rem;
-  padding-bottom: 1rem;
-  font-size: 1.7rem;
-  font-weight: 400;
-  color: $VeryDarkViolet;
-}
-
-.feature-item__desc {
-  color: $DarkGrayishViolet;
-  line-height: 1.5;
-}
-
-.features-info__work {
-  margin-top: 10.25rem;
-  padding: 0 5rem;
-  height: 15.625rem;
-  background-color: $DarkViolet;
-  background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-  color: white;
-  display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.features-section::before {
+  content: "";
+  width: 7.75rem;
+  height: 20.75rem;
+  background-image: url("../images/bg-pattern-intro-right-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -8.1%;
+  right: 0;
+}
+
+.features-section__line {
+  border-top: 1px solid $DarkGrayishViolet;
+  width: 9.3rem;
+}
+
+.features-section__title {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 2.8rem;
+  margin-bottom: 5rem;
+}
+
+.features-section__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: calc(9.25rem - 3.75rem);
+}
+
+.feature-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3.75rem;
 
   h2 {
-    font-size: 3.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
     font-weight: 400;
-    line-height: 1;
+    font-size: 1.7rem;
   }
 
-  button {
-    @include button(white, white, $DarkViolet, white);
-    width: 10rem;
+  p {
+    line-height: 1.6;
+    color: $DarkGrayishViolet;
   }
 }
 
-//xxxxxxxxx   MOBILE MAIN CONTENT  xxxxxxxxxxxxxx
+.features-section__work {
+  background-color: $DarkViolet;
+  color: white;
+  text-align: center;
+  padding-top: 4.4rem;
+  padding-bottom: 4.7rem;
 
-@media only screen and (max-width: 375px) {
-  // Hero Section ****************************************
-  .hero-section {
-    height: fit-content;
-    padding: 0;
-    flex-direction: column-reverse;
-    position: relative;
-  }
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
 
-  .hero-section::before {
-    content: "";
-
-    background-image: url("../images/bg-pattern-intro-left-mobile.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 165px;
-    height: 165px;
-    position: absolute;
-    top: 47.4%;
-  }
-
-  .hero-section::after {
-    content: "";
-    background-image: url("../images/bg-pattern-intro-right-mobile.svg");
-    background-size: 120px 330px;
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 100%;
-    width: 50%;
-    height: 40%;
-    position: absolute;
-    top: 78.6%;
-    left: 50%;
-  }
-
-  .hero-info {
-    height: 500px;
-    width: 375px;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-info__line {
-    display: none;
-  }
-
-  .hero-info__title {
-    font-size: 2.9rem;
-    text-align: center;
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
     line-height: 1.1;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    position: relative; // to place it above the svg lines
-  }
-
-  .hero-info__desc {
-    margin-bottom: 2.3rem;
-    line-height: 1.5;
-    text-align: center;
-  }
-  .hero-info__btn {
-    @include button(white, white, $DarkViolet, white);
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: 28.18rem;
-    background-image: url("../images/image-intro-mobile.jpg");
-  }
-
-  // Work Section ****************************************************************
-
-  .features-section {
-    height: fit-content;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .features-info__line {
-    margin-top: 8.75rem;
-    margin-bottom: 2.9rem;
-  }
-
-  .features-info__title {
-    margin-bottom: 6.4rem;
-  }
-
-  .features-info__list {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: auto;
-
-    li:first-of-type {
-      width: auto;
-    }
-
-    li:nth-of-type(2) {
-      padding: 0;
-      margin: 4rem 0;
-      width: auto;
-    }
-
-    li:last-of-type {
-      padding: 0;
-      width: auto;
-    }
-  }
-  //general list item
-  .feature-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature-item__desc {
-    text-align: center;
-  }
-
-  .features-info__work {
-    margin-top: 9rem;
-    padding: 0;
-    height: 21.5rem;
-    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
-    background-size: 174px 316px;
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 0%;
-    flex-direction: column;
-    justify-content: center;
-
-    h2 {
-      font-size: 2.5rem;
-      text-align: center;
-      font-weight: 400;
-      line-height: 1;
-      margin-top: 1rem;
-      margin-bottom: 3.3rem;
-    }
+    margin-bottom: 2.5rem;
   }
 }
+
+.features-section__cta {
+  @include button(white, white, $DarkViolet, white);
+}
+
+//Media Queries...............
+
+@media only screen and (min-width: 376px) {
+  // Naštimati hero image već ovdje !
+  .features-section__work h2 {
+    padding: 0 1.5rem;
+  }
+}
+
+
