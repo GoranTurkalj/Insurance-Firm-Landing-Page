@@ -1,11 +1,13 @@
 @mixin fluidFont($minFont, $maxFont, $minScreen, $maxScreen) {
-  font-size: calc($minFont + ($maxFont - $minFont) * (100vw - $minScreen) / ($maxScreen - $minScreen));
+  font-size: calc(
+    $minFont + ($maxFont - $minFont) * (100vw - $minScreen) /
+      ($maxScreen - $minScreen)
+  );
 }
 
 @mixin button($color, $borderColor, $textColorHover, $backgroundColorHover) {
   transition: all 200ms;
-  height: 2.5rem;
-  width: 146px;
+  padding: 0.6rem 1.5rem;
   border: 2px solid $borderColor;
   background-color: transparent;
   font-family: inherit;

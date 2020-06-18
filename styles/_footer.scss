@@ -103,3 +103,36 @@ footer {
     width: 50%;
   }
 }
+
+@media only screen and (min-width: 968px) {
+  footer {
+    padding-top: 2.5rem;
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+  }
+  .footer-nav {
+    width: 100%;
+  }
+
+  .footer-nav__list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .footer-list__item {
+    width: 25%;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer {
+    padding-right: 10.25rem;
+    padding-left: 10.25rem;
+  }
+
+  .footer-list__item {
+    align-items: start;
+  }
+}

@@ -1,7 +1,9 @@
 header {
   background-color: white;
   width: 100%;
-  padding: 1.5rem;
+
+  height: 5rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,16 +27,30 @@ header {
     align-items: center;
     justify-content: space-evenly;
 
-    li {
+    a {
+      text-decoration: none;
       color: $DarkGrayishViolet;
       font-size: 0.9rem;
       font-weight: 700;
       letter-spacing: 1px;
       padding: 0 1rem;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $VeryDarkViolet;
+      }
     }
 
-    button {
+    #view-plans-btn {
       @include button($VeryDarkViolet, $VeryDarkViolet, white, $VeryDarkViolet);
     }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    padding-right: 10.25rem;
+    padding-left: 10.25rem;
   }
 }
