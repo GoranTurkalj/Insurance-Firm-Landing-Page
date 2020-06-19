@@ -25,7 +25,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ## Where to find everything
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design to work to. 
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design to work to.
 
 The designs are in JPG static format. This will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. This should help train your eye to perceive differences in spacings and sizes.
 
@@ -78,3 +78,6 @@ A massive thank you to our community sponsors!
 - [Vercel](https://bit.ly/fem-vercel) offers an amazing website hosting service, which is super simple to set up. Just connect your GitHub account, point to a repo and your site will be deployed. Perfect for your website and frontend hosting needs - especially since it's free to get started!
 - [Sizzy](https://bit.ly/fm-sizzy) is an extremely useful browser designed specifically to improve a developer's workflow when building websites. You can fire up multiple device emulators and run them all in sync while building out your web pages. Perfect for helping build fully responsive websites!
 - [Qualified](https://bit.ly/fem-qualified) helps companies assess engineers with realistic code tests and pair-programming interviews. Their assessments test on-the-job skills as opposed to algorithmic puzzles which leads to a much better recruitment process for everyone involved.
+
+
+4. Make the mobile navbar appear on click

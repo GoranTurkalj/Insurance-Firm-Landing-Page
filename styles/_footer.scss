@@ -22,13 +22,17 @@ footer {
   display: flex;
   justify-content: space-between;
 
-  img {
+  .social-link {
     transition: transform 200ms;
-    vertical-align: middle;
-  }
 
-  img:hover {
-    transform: scale(1.1);
+    &:hover,
+    &:active {
+      transform: translateY(-4px);
+
+      .svg-icon {
+        fill: $VeryDarkViolet;
+      }
+    }
   }
 }
 

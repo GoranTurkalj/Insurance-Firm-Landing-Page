@@ -216,7 +216,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    top: -14.6%;
+    top: -13%;
     left: 0;
   }
 
@@ -251,6 +251,20 @@
   .intro-section {
     height: 37.5rem;
     padding: 6.5rem 10.25rem;
+  }
+
+  .intro-section::after {
+    content: "";
+    background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+    background-size: cover;
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    width: 27.5rem;
+    height: 100%;
+    position: absolute;
+    top: -13.5%;
+    right: 0;
+    z-index: 2;
   }
 
   .intro-section__line {
@@ -316,5 +330,9 @@
   .intro-section__info {
     width: 100%;
     padding-right: 1rem;
+  }
+
+  .features-section__title {
+    font-size: 4.4rem;
   }
 }
