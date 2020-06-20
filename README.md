@@ -80,4 +80,4 @@ A massive thank you to our community sponsors!
 - [Qualified](https://bit.ly/fem-qualified) helps companies assess engineers with realistic code tests and pair-programming interviews. Their assessments test on-the-job skills as opposed to algorithmic puzzles which leads to a much better recruitment process for everyone involved.
 
 
-4. Make the mobile navbar appear on click
+

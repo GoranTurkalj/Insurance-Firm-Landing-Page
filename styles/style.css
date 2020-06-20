@@ -1,3 +1,43 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html {
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  font-family: "Karla";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Dm Serif Display";
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#wrapper ul {
+  list-style-type: none;
+}
+
 header {
   background-color: white;
   width: 100%;
@@ -633,6 +673,7 @@ footer {
 
 .social-media-list {
   width: 9rem;
+  height: 30px;
   padding: 2.2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -649,13 +690,18 @@ footer {
   transition: transform 200ms, -webkit-transform 200ms;
 }
 
+.social-media-list .social-link i {
+  font-size: 1.5rem;
+  color: #837d87;
+}
+
 .social-media-list .social-link:hover, .social-media-list .social-link:active {
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
 }
 
-.social-media-list .social-link:hover .svg-icon, .social-media-list .social-link:active .svg-icon {
-  fill: #2b272f;
+.social-media-list .social-link:hover i, .social-media-list .social-link:active i {
+  color: #2b272f;
 }
 
 .footer-line {
@@ -791,46 +837,5 @@ footer {
         -ms-flex-align: start;
             align-items: start;
   }
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-html {
-  width: 100vw;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: black;
-  width: 100%;
-  font-family: "Karla";
-  overflow-x: hidden;
-  overflow-y: visible;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Dm Serif Display";
-}
-
-#wrapper {
-  width: 100%;
-  max-width: 90rem;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-#wrapper ul {
-  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */

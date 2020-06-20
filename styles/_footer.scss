@@ -9,28 +9,35 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
+  
 .social-media-container {
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
+}
 .social-media-list {
   width: 9rem;
+  height: 30px; 
   padding: 2.2rem 0;
   display: flex;
   justify-content: space-between;
-
+  
   .social-link {
     transition: transform 200ms;
+
+    i {
+      font-size: 1.5rem;
+      color: $DarkGrayishViolet;
+    }
 
     &:hover,
     &:active {
       transform: translateY(-4px);
 
-      .svg-icon {
-        fill: $VeryDarkViolet;
+      i {
+        color: $VeryDarkViolet;
       }
     }
   }
@@ -41,7 +48,7 @@ footer {
   opacity: 30%;
   width: 100%;
 }
-
+ 
 .footer-nav__list {
   padding: 2.5rem 0;
   display: flex;
@@ -53,7 +60,7 @@ footer {
   width: 100%;
   margin-bottom: 2.75rem;
 
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
 

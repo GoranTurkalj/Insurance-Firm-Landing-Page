@@ -27,12 +27,12 @@ function toggleMobileNav() {
 
 hamburgerMenu.addEventListener("click", toggleMobileNav);
 
-// let documentWidth = document.documentElement.offsetWidth;
+let documentWidth = document.documentElement.offsetWidth;
 
-// let elements = document.querySelectorAll("*");
+let elements = document.querySelectorAll("*");
 
-// for (const el of elements) {
-//   if (el.offsetWidth > documentWidth) {
-//     console.log(el);
-//   }
-// }
+for (const el of elements) {
+  if (el.offsetWidth > documentWidth) {
+    console.log(el);
+  }
+}
