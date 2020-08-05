@@ -11,7 +11,7 @@ window.addEventListener("resize", getInnerWidth);
 //Gets window innerWidth
 function getInnerWidth() {
   windowWidth = window.innerWidth;
-  console.log(windowWidth);
+
   if (menuOpened && windowWidth >= 700) {
     menuOpened = false;
     hideMobileNav();
