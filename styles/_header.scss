@@ -24,9 +24,15 @@ header {
   height: calc(100vh - 5rem);
   flex-direction: column;
   align-items: center;
+  overflow-y: visible; 
+  overflow-x: hidden;
 
   .nav-item {
     padding-top: 3.25rem;
+  }
+
+  .nav-item:last-of-type {
+    margin-bottom: 3rem; 
   }
 
   a {
@@ -47,6 +53,7 @@ header {
     @include button(white, white, $VeryDarkViolet, white);
     font-size: 1.2rem;
     padding: 1rem 6.375rem;
+    
   }
 }
 
@@ -88,9 +95,15 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    overflow-y: visible; 
+    overflow-x: visible; 
 
     .nav-item {
       padding-top: 0;
+    }
+
+    .nav-item:last-of-type {
+      margin-bottom: 0; 
     }
 
     a {

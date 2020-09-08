@@ -80,10 +80,16 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-y: visible;
+  overflow-x: hidden;
 }
 
 .main-nav__list .nav-item {
   padding-top: 3.25rem;
+}
+
+.main-nav__list .nav-item:last-of-type {
+  margin-bottom: 3rem;
 }
 
 .main-nav__list a {
@@ -167,9 +173,14 @@ header {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    overflow-y: visible;
+    overflow-x: visible;
   }
   .main-nav__list .nav-item {
     padding-top: 0;
+  }
+  .main-nav__list .nav-item:last-of-type {
+    margin-bottom: 0;
   }
   .main-nav__list a {
     text-decoration: none;
