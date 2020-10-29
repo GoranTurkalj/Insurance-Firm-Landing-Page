@@ -24,7 +24,7 @@ header {
   height: calc(100vh - 5rem);
   flex-direction: column;
   align-items: center;
-  overflow-y: visible; 
+  overflow-y: visible;
   overflow-x: hidden;
 
   .nav-item {
@@ -32,7 +32,7 @@ header {
   }
 
   .nav-item:last-of-type {
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
   }
 
   a {
@@ -53,7 +53,6 @@ header {
     @include button(white, white, $VeryDarkViolet, white);
     font-size: 1.2rem;
     padding: 1rem 6.375rem;
-    
   }
 }
 
@@ -95,15 +94,15 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    overflow-y: visible; 
-    overflow-x: visible; 
+    overflow-y: visible;
+    overflow-x: visible;
 
     .nav-item {
       padding-top: 0;
     }
 
     .nav-item:last-of-type {
-      margin-bottom: 0; 
+      margin-bottom: 0;
     }
 
     a {
@@ -112,7 +111,7 @@ header {
       font-size: 0.9rem;
       font-weight: 700;
       letter-spacing: 1px;
-      padding: 0 1rem;
+      margin: 0 1rem;
 
       &:hover,
       &:active,
@@ -128,10 +127,39 @@ header {
   }
 }
 
+@media only screen and (min-width: 968px) {
+  #view-plans-btn {
+    margin-right: 0;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   header {
     padding-right: 10.25rem;
     padding-left: 10.25rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  header {
+    height: 5.55vw;
+  }
+
+  .logo {
+    width: 7.77vw;
+    height: 1.25vw;
+  }
+
+  .main-nav__list {
+    a {
+      font-size: 1.33vw;
+      margin: 0 1.11vw;
+    }
+
+    #view-plans-btn {
+      font-size: 1.33vw;
+      padding: 1rem 2vw;
+    }
   }
 }
 

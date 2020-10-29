@@ -210,8 +210,8 @@
 
   .features-section::before {
     content: "";
-    width: 198px;
-    height: 500px;
+    width: 12.375rem;
+    height: 31.25rem;
     background-image: url("../images/bg-pattern-intro-left-desktop.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -301,6 +301,7 @@
     height: 650px;
     background-position: top right;
     z-index: 1;
+    
   }
 
   .features-section {
@@ -334,5 +335,95 @@
 
   .features-section__title {
     font-size: 4.4rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .intro-section {
+    height: 50vw;
+  }
+
+  .intro-section::after {
+    width: 30.55vw;
+    height: 41.66vw;
+  }
+
+  .intro-section__introduction {
+    height: 41.6vw;
+    justify-content: flex-start;
+  }
+
+  .intro-section__line {
+    width: 10.33vw;
+  }
+
+  .intro-section__title {
+    font-size: 4.88vw;
+  }
+
+  .intro-section__info {
+    font-size: 1.11vw;
+    margin: 4.17vw 0;
+  }
+
+  .intro-section__cta {
+    font-size: 1vw;
+  }
+  .intro-section__hero {
+    height: 54.16vw;
+  }
+
+  //Features section
+  .features-section {
+    padding-top: 21.11vw;
+    padding-bottom: 9.72vw;
+  }
+
+  .features-section::before {
+    
+    width: 13.75vw;
+    height: 34.72vw;
+   
+  }
+
+  .features-section__list {
+    margin-bottom: 6.11vw;
+
+    img {
+      width: 5.97vw;
+      height: auto;
+    }
+  }
+
+  .feature-item {
+    padding-right: 2.5rem;
+    h2 {
+      font-size: 1.88vw;
+    }
+    p {
+      font-size: 1.11vw;
+    }
+  }
+  .features-section__title {
+    font-size: 4.88vw;
+    margin-bottom: 5.55vw;
+  }
+  .features-section__line {
+    width: 10.33vw;
+  }
+  .features-section__work {
+    width: 77.22vw;
+    height: 17.36vw;
+    background-position: top right;
+    background-size: contain;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 4.5vw;
+    }
+
+    .features-section__cta {
+      font-size: 1vw;
+    }
   }
 }

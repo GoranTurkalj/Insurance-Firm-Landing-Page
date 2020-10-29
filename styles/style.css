@@ -34,7 +34,6 @@ h6 {
 
 #wrapper {
   width: 100%;
-  max-width: 90rem;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -188,7 +187,7 @@ header {
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 1px;
-    padding: 0 1rem;
+    margin: 0 1rem;
   }
   .main-nav__list a:hover, .main-nav__list a:active, .main-nav__list a:focus {
     letter-spacing: 1px;
@@ -214,10 +213,34 @@ header {
   }
 }
 
+@media only screen and (min-width: 968px) {
+  #view-plans-btn {
+    margin-right: 0;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   header {
     padding-right: 10.25rem;
     padding-left: 10.25rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  header {
+    height: 5.55vw;
+  }
+  .logo {
+    width: 7.77vw;
+    height: 1.25vw;
+  }
+  .main-nav__list a {
+    font-size: 1.33vw;
+    margin: 0 1.11vw;
+  }
+  .main-nav__list #view-plans-btn {
+    font-size: 1.33vw;
+    padding: 1rem 2vw;
   }
 }
 
@@ -525,8 +548,8 @@ header {
   }
   .features-section::before {
     content: "";
-    width: 198px;
-    height: 500px;
+    width: 12.375rem;
+    height: 31.25rem;
     background-image: url("../images/bg-pattern-intro-left-desktop.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -655,6 +678,82 @@ header {
   }
 }
 
+@media only screen and (min-width: 120rem) {
+  .intro-section {
+    height: 50vw;
+  }
+  .intro-section::after {
+    width: 30.55vw;
+    height: 41.66vw;
+  }
+  .intro-section__introduction {
+    height: 41.6vw;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .intro-section__line {
+    width: 10.33vw;
+  }
+  .intro-section__title {
+    font-size: 4.88vw;
+  }
+  .intro-section__info {
+    font-size: 1.11vw;
+    margin: 4.17vw 0;
+  }
+  .intro-section__cta {
+    font-size: 1vw;
+  }
+  .intro-section__hero {
+    height: 54.16vw;
+  }
+  .features-section {
+    padding-top: 21.11vw;
+    padding-bottom: 9.72vw;
+  }
+  .features-section::before {
+    width: 13.75vw;
+    height: 34.72vw;
+  }
+  .features-section__list {
+    margin-bottom: 6.11vw;
+  }
+  .features-section__list img {
+    width: 5.97vw;
+    height: auto;
+  }
+  .feature-item {
+    padding-right: 2.5rem;
+  }
+  .feature-item h2 {
+    font-size: 1.88vw;
+  }
+  .feature-item p {
+    font-size: 1.11vw;
+  }
+  .features-section__title {
+    font-size: 4.88vw;
+    margin-bottom: 5.55vw;
+  }
+  .features-section__line {
+    width: 10.33vw;
+  }
+  .features-section__work {
+    width: 77.22vw;
+    height: 17.36vw;
+    background-position: top right;
+    background-size: contain;
+    margin: 0 auto;
+  }
+  .features-section__work h2 {
+    font-size: 4.5vw;
+  }
+  .features-section__work .features-section__cta {
+    font-size: 1vw;
+  }
+}
+
 footer {
   background-color: #fafafa;
   background-image: url("../images/bg-pattern-footer-mobile.svg");
@@ -689,7 +788,7 @@ footer {
 
 .social-media-list {
   width: 9rem;
-  height: 30px;
+  height: 1.875rem;
   padding: 2.2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -852,6 +951,29 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .social-media-list {
+    width: 10vw;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding: 2.2rem 0;
+  }
+  .social-media-list .social-link i {
+    font-size: 1.67vw;
+  }
+  .social-media-list .social-link:hover, .social-media-list .social-link:active {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  .footer-list__item a {
+    font-size: 1vw;
+  }
+  .footer-item__title {
+    font-size: 1vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
